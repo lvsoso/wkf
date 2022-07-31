@@ -1,9 +1,9 @@
-# cli-template
+# wkf
 
 ## Usage
 > This cli template shows the date and time in the terminal
 
-cli-template
+wkf
 
 ## Description
 
@@ -14,15 +14,16 @@ This template prints the date or time to the terminal.
 ## Examples
 
 ```bash
-cli-template date
-cli-template date --format 20060102
-cli-template time
-cli-template time --live
+wkf date
+wkf date --format 20060102
+wkf time
+wkf time --live
 ```
 
 ## Flags
 |Flag|Usage|
 |----|-----|
+|`--config string`|config file (default is $HOME/.wkf.yaml)|
 |`--debug`|enable debug messages|
 |`--disable-update-checks`|disables update checks|
 |`--raw`|print unstyled raw output (set it if output is written to a file)|
@@ -30,22 +31,23 @@ cli-template time --live
 ## Commands
 |Command|Usage|
 |-------|-----|
-|`cli-template completion`|Generate the autocompletion script for the specified shell|
-|`cli-template date`|Prints the current date.|
-|`cli-template help`|Help about any command|
-|`cli-template time`|Prints the current time|
+|`wkf completion`|Generate the autocompletion script for the specified shell|
+|`wkf date`|Prints the current date.|
+|`wkf help`|Help about any command|
+|`wkf shell`|A Interactive input entry.|
+|`wkf time`|Prints the current time|
 # ... completion
-`cli-template completion`
+`wkf completion`
 
 ## Usage
 > Generate the autocompletion script for the specified shell
 
-cli-template completion
+wkf completion
 
 ## Description
 
 ```
-Generate the autocompletion script for cli-template for the specified shell.
+Generate the autocompletion script for wkf for the specified shell.
 See each sub-command's help for details on how to use the generated script.
 
 ```
@@ -53,17 +55,17 @@ See each sub-command's help for details on how to use the generated script.
 ## Commands
 |Command|Usage|
 |-------|-----|
-|`cli-template completion bash`|Generate the autocompletion script for bash|
-|`cli-template completion fish`|Generate the autocompletion script for fish|
-|`cli-template completion powershell`|Generate the autocompletion script for powershell|
-|`cli-template completion zsh`|Generate the autocompletion script for zsh|
+|`wkf completion bash`|Generate the autocompletion script for bash|
+|`wkf completion fish`|Generate the autocompletion script for fish|
+|`wkf completion powershell`|Generate the autocompletion script for powershell|
+|`wkf completion zsh`|Generate the autocompletion script for zsh|
 # ... completion bash
-`cli-template completion bash`
+`wkf completion bash`
 
 ## Usage
 > Generate the autocompletion script for bash
 
-cli-template completion bash
+wkf completion bash
 
 ## Description
 
@@ -75,17 +77,17 @@ If it is not installed already, you can install it via your OS's package manager
 
 To load completions in your current shell session:
 
-	source <(cli-template completion bash)
+	source <(wkf completion bash)
 
 To load completions for every new session, execute once:
 
 #### Linux:
 
-	cli-template completion bash > /etc/bash_completion.d/cli-template
+	wkf completion bash > /etc/bash_completion.d/wkf
 
 #### macOS:
 
-	cli-template completion bash > /usr/local/etc/bash_completion.d/cli-template
+	wkf completion bash > /usr/local/etc/bash_completion.d/wkf
 
 You will need to start a new shell for this setup to take effect.
 
@@ -96,12 +98,12 @@ You will need to start a new shell for this setup to take effect.
 |----|-----|
 |`--no-descriptions`|disable completion descriptions|
 # ... completion fish
-`cli-template completion fish`
+`wkf completion fish`
 
 ## Usage
 > Generate the autocompletion script for fish
 
-cli-template completion fish
+wkf completion fish
 
 ## Description
 
@@ -110,11 +112,11 @@ Generate the autocompletion script for the fish shell.
 
 To load completions in your current shell session:
 
-	cli-template completion fish | source
+	wkf completion fish | source
 
 To load completions for every new session, execute once:
 
-	cli-template completion fish > ~/.config/fish/completions/cli-template.fish
+	wkf completion fish > ~/.config/fish/completions/wkf.fish
 
 You will need to start a new shell for this setup to take effect.
 
@@ -125,12 +127,12 @@ You will need to start a new shell for this setup to take effect.
 |----|-----|
 |`--no-descriptions`|disable completion descriptions|
 # ... completion powershell
-`cli-template completion powershell`
+`wkf completion powershell`
 
 ## Usage
 > Generate the autocompletion script for powershell
 
-cli-template completion powershell
+wkf completion powershell
 
 ## Description
 
@@ -139,7 +141,7 @@ Generate the autocompletion script for powershell.
 
 To load completions in your current shell session:
 
-	cli-template completion powershell | Out-String | Invoke-Expression
+	wkf completion powershell | Out-String | Invoke-Expression
 
 To load completions for every new session, add the output of the above command
 to your powershell profile.
@@ -151,12 +153,12 @@ to your powershell profile.
 |----|-----|
 |`--no-descriptions`|disable completion descriptions|
 # ... completion zsh
-`cli-template completion zsh`
+`wkf completion zsh`
 
 ## Usage
 > Generate the autocompletion script for zsh
 
-cli-template completion zsh
+wkf completion zsh
 
 ## Description
 
@@ -172,11 +174,11 @@ To load completions for every new session, execute once:
 
 #### Linux:
 
-	cli-template completion zsh > "${fpath[1]}/_cli-template"
+	wkf completion zsh > "${fpath[1]}/_wkf"
 
 #### macOS:
 
-	cli-template completion zsh > /usr/local/share/zsh/site-functions/_cli-template
+	wkf completion zsh > /usr/local/share/zsh/site-functions/_wkf
 
 You will need to start a new shell for this setup to take effect.
 
@@ -187,38 +189,51 @@ You will need to start a new shell for this setup to take effect.
 |----|-----|
 |`--no-descriptions`|disable completion descriptions|
 # ... date
-`cli-template date`
+`wkf date`
 
 ## Usage
 > Prints the current date.
 
-cli-template date
+wkf date
 
 ## Flags
 |Flag|Usage|
 |----|-----|
 |`-f, --format string`|specify a custom date format (default "02 Jan 06")|
 # ... help
-`cli-template help`
+`wkf help`
 
 ## Usage
 > Help about any command
 
-cli-template help [command]
+wkf help [command]
 
 ## Description
 
 ```
 Help provides help for any command in the application.
-Simply type cli-template help [path to command] for full details.
+Simply type wkf help [path to command] for full details.
+```
+# ... shell
+`wkf shell`
+
+## Usage
+> A Interactive input entry.
+
+wkf shell
+
+## Description
+
+```
+A Interactive input entry.
 ```
 # ... time
-`cli-template time`
+`wkf time`
 
 ## Usage
 > Prints the current time
 
-cli-template time
+wkf time
 
 ## Description
 
